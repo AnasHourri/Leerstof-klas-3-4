@@ -13,7 +13,7 @@ class Account {   //package visibility!
      * Creates a new account with the next available account number
      */
     public Account() {
-        balance = 100;
+        balance = 0;
         accountNumber = nextAccountNbr;
         nextAccountNbr += 1;
     }
@@ -32,11 +32,11 @@ class Account {   //package visibility!
 
     /**
      * withdraw an amount decreasing the balance
-     * @param amount positive amount, not larger then the balance
+     * @param amount positive amount, not larger than the balance
      */
     public void withdraw(final double amount) {
         if(amount< 0){
-            //System.err.println("Account.withdraw(...): cannot withdraw negative amount.");
+            System.err.println("Account.withdraw(...): cannot withdraw negative amount.");
             //or throw exception
             return;
         }
@@ -44,7 +44,7 @@ class Account {   //package visibility!
         if (amount<=balance) {
             balance -= amount;
         } else {
-            //System.err.println("Cannot withdraw money that is not present");
+            System.err.println("Cannot withdraw money that is not present");
             //or throw exception
         }
     }
