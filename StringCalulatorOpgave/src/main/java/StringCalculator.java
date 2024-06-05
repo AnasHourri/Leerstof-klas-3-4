@@ -11,4 +11,13 @@ public class StringCalculator {
         Integer.parseInt(n); // returns integer 5
     }
 
+    public static int calculate(String input){
+        if(input.isEmpty()){
+            return 0;
+        }
+        return -1;
+    }
+
+
+
 }
